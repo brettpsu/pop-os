@@ -5,7 +5,7 @@ Uses Ansible to configure your machine.
 ## HOW TO USE
 Clone the repo, cd into the dir, run the makefile
 ```
-$ git clone https://github.com/kevinjelnl/setup-pop_os.git 
+$ git clone https://github.com/brettpsu/pop_os.git 
 $ cd ./pop_os
 $ make setup_machine
 ```
@@ -20,7 +20,7 @@ $ make run_role tag=apt
 or any of defined roles in: ./ansible/playbook.yml
 
 ## TODO
-- [x] Create a howto
+- [ ] Create a howto
 - [x] Set correct pathing, after clone (in the bash scripts)
 - [x] Add the ansible-galaxy role installation
 - [x] Add autojump into the playbook: https://github.com/wting/autojump
