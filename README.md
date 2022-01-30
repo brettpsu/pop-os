@@ -1,4 +1,3 @@
-# pop-os
 # Configure machine after reinstall
 
 Uses Ansible to configure your machine.
