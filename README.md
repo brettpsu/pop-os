@@ -20,10 +20,13 @@ $ make run_role tag=apt
 or any of defined roles in: ./ansible/playbook.yml
 
 ## TODO
-- [ ] Create a howto
-- [ ] Set correct pathing, after clone (in the bash scripts)
-- [ ] Add the ansible-galaxy role installation
-- [ ] Add autojump into the playbook: https://github.com/wting/autojump
+- [ ] Add script to add .smbcredentials file
+- [ ] Add script to add .ssh dir and keys
+- [ ] Add system monitor to task bar
+- [ ] Add firefox extentions
+- [ ] Add wine and config files
+- [ ] Add mt5 & scripts after wine installed
+- [ ] Add steam and possible games
 
 ## NOTE
 Use this at your own risk, this uses packages from others! Those will be downloaded and installed automatically!
