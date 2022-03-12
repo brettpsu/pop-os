@@ -8,48 +8,49 @@
     state: present
     method: user
   loop:
-    - { name: 'DBeaver', url: 'https://flathub.org/repo/appstream/io.dbeaver.DBeaverCommunity.flatpakref' }    
+    - { name: 'Telegram', url: 'https://flathub.org/repo/appstream/org.telegram.desktop.flatpakref' }    
     - { name: 'Teams', url: 'https://flathub.org/repo/appstream/com.microsoft.Teams.flatpakref' }
     - { name: 'Slack', url: 'https://flathub.org/repo/appstream/com.slack.Slack.flatpakref' }
     - { name: 'Remmina', url: 'https://flathub.org/repo/appstream/org.remmina.Remmina.flatpakref' }
+    - { name: 'Zoom', url: 'https://flathub.org/repo/appstream/us.zoom.Zoom.flatpakref' }
 
-- name: remove several flatpak items
-  flatpak:
-    name: "{{ item.url }}"
-    state: absent
-    method: user
-  loop:
-    - { name: 'Visual Studio Code - OSS', url: 'https://flathub.org/repo/appstream/com.visualstudio.code.oss.flatpakref' }
-    - { name: 'Flowblade', url: 'https://flathub.org/repo/appstream/io.github.jliljebl.Flowblade.flatpakref' }
-    - { name: 'Spotify', url: 'https://flathub.org/repo/appstream/com.spotify.Client.flatpakref' }
+#- name: remove several flatpak items
+#  flatpak:
+#    name: "{{ item.url }}"
+#    state: absent
+#    method: user
+#  loop:
+#    - { name: 'Visual Studio Code - OSS', url: 'https://flathub.org/repo/appstream/com.visualstudio.code.oss.flatpakref' }
+#    - { name: 'Flowblade', url: 'https://flathub.org/repo/appstream/io.github.jliljebl.Flowblade.flatpakref' }
+#    - { name: 'Spotify', url: 'https://flathub.org/repo/appstream/com.spotify.Client.flatpakref' }
 
-- name: add several snap items with --classic tag
-  become: yes
-  snap:
-    name: "{{ item }}"
-    classic: yes
-  loop:
-    - go
-    - code
-    - dotnet-sdk
+#- name: add several snap items with --classic tag
+#  become: yes
+#  snap:
+#    name: "{{ item }}"
+#    classic: yes
+#  loop:
+#    - go
+#    - code
+#    - dotnet-sdk
 
-- name: Install snap packages
-  become: yes
-  snap:
-    name:
-      - docker
-      - p3x-redis-ui
-      - yubioath-desktop
-      - chromium
-      - vlc
-      - pdfmixtool
-      - okular
-      - ncspot
+#- name: Install snap packages
+#  become: yes
+#  snap:
+#    name:
+#      - docker
+#      - p3x-redis-ui
+#      - yubioath-desktop
+#      - chromium
+#      - vlc
+#      - pdfmixtool
+#      - okular
+#      - ncspot
 
-- name: remove a snap package
-  become: yes
-  snap:
-    name: 
-      - auto-cpufreq
-      - codium
-    state: absent
+#- name: remove a snap package
+#  become: yes
+#  snap:
+#    name: 
+#      - auto-cpufreq
+#      - codium
+#    state: absent

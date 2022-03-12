@@ -6,9 +6,9 @@
     pkg:
 #    - snapd
 #    - bat
-#    - fzf
+    - firefox
     - htop
-#    - thefuck
+    - discord
 #    - neovim
     - tmux
     - tree
