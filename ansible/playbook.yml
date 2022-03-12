@@ -80,16 +80,16 @@
 #    shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #    when: not ohmyzsh.stat.exists
   
-  - name: Clone dotfiles
-    git:
-      repo: "https://github.com/kevinjelnl/dotfiles.git"
-      dest: "{{ local_home }}/dotfiles"
-      update: no
+#  - name: Clone dotfiles
+#    git:
+#      repo: "https://github.com/kevinjelnl/dotfiles.git"
+#      dest: "{{ local_home }}/dotfiles"
+#      update: no
 
-  - name: Set dotfiles
-    shell: ./install
-    args:
-      chdir: "{{ local_home }}/dotfiles"
+#  - name: Set dotfiles
+#    shell: ./install
+#    args:
+#      chdir: "{{ local_home }}/dotfiles"
 
 # # change the remote of the repo to SSH
 # git remote set-url origin git@github.com:kevinjelnl/dotfiles.git
@@ -100,22 +100,22 @@
       name: "{{ region_loc }}"
       state: present
 
-  - name: Test if submodule with gist is present
-    stat:
-      path: "{{ gist_file }}"
-    register: dconfisthere
+#  - name: Test if submodule with gist is present
+#    stat:
+#      path: "{{ gist_file }}"
+#    register: dconfisthere
 
-  - name: load DCONF settings
-    shell: "dconf load '/' < '{{ gist_file }}'"
-    when: dconfisthere.stat.exists
+#  - name: load DCONF settings
+#    shell: "dconf load '/' < '{{ gist_file }}'"
+#    when: dconfisthere.stat.exists
   
-  - name: Set multiple crons
-    cron:
-      name: "{{ item.name }}"
-      special_time: "{{ item.time }}"
-      job: "{{ item.job }}"
-    loop:
-      - { name: "dump dconf", time: "weekly", job: "/usr/bin/dconf dump / > {{ gist_file }}" }
+#  - name: Set multiple crons
+#    cron:
+#      name: "{{ item.name }}"
+#      special_time: "{{ item.time }}"
+#      job: "{{ item.job }}"
+#    loop:
+#      - { name: "dump dconf", time: "weekly", job: "/usr/bin/dconf dump / > {{ gist_file }}" }
   
 #  - name: Install multiple python packages
 #    pip:
