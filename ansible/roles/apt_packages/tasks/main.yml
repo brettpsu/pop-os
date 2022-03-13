@@ -14,7 +14,7 @@
     - tmux
     - tree
 #    - alacritty
-#    - zsh
+    - solaar
 #    - appmenu-gtk3-module
     - gnome-tweaks
 #    - tlp
