@@ -8,6 +8,7 @@
     state: present
     method: user
   loop:
+    - { name: 'Brave Browser', url: 'https://flathub.org/repo/appstream/com.brave.Browser.flatpakref' }
     - { name: 'Telegram', url: 'https://flathub.org/repo/appstream/org.telegram.desktop.flatpakref' }    
     - { name: 'Teams', url: 'https://flathub.org/repo/appstream/com.microsoft.Teams.flatpakref' }
     - { name: 'Slack', url: 'https://flathub.org/repo/appstream/com.slack.Slack.flatpakref' }
