@@ -6,6 +6,7 @@
     pkg:
 #    - snapd
 #    - bat
+    - cifs-utils
     - firefox
     - htop
     - discord
