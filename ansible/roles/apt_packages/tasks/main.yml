@@ -6,6 +6,7 @@
     pkg:
 #    - snapd
 #    - bat
+    - atom
     - cifs-utils
     - firefox
     - htop
@@ -16,7 +17,7 @@
     - tree
 #    - alacritty
     - solaar
-    - open-server
+    - openssh-server
 #    - appmenu-gtk3-module
     - gnome-tweaks
 #    - tlp
