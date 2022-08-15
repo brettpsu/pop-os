@@ -32,5 +32,7 @@ or any of defined roles in: ./ansible/playbook.yml
 Use this at your own risk, this uses packages from others! Those will be downloaded and installed automatically!
 
 ## Under the hood
+
 https://system76.com/pop
+
 https://github.com/jaredhocutt/ansible-gnome-extensions
