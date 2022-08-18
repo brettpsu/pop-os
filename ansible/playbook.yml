@@ -6,7 +6,7 @@
     local_user: "{{ ansible_user_id }}"
     local_home: "{{ lookup('env','HOME') }}"
     region_loc: "en_US.UTF-8"
-    new_hostname: d0
+    new_hostname: bb8
 #    gist_file: '{{ playbook_dir.split("/")[0:-1]|join("/") }}/18dafb104e93c9a2362ffe85c0dfd02e/dconf-settings.dconf'
 #    gnome_extension_ids:
 #      - 1092  # AudioSwitcher
