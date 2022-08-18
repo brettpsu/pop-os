@@ -62,7 +62,7 @@
       - "{{ local_home }}/.local/bin"
       - "{{ local_home }}/pluto"
 
-  - name: Make sudo brett passwordless
+  - name: Make sudo user passwordless
     become: yes
     lineinfile:
       path: /etc/sudoers.d/brett
